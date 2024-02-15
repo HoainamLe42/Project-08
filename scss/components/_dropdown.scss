@@ -7,6 +7,11 @@
   left: 0;
   display: none;
 
+  @include abstracts.breakpoint(lg) {
+    position: inherit;
+    padding-top: 0;
+  }
+
   &__inner {
     --inner-padding: 30px;
 
@@ -24,6 +29,17 @@
       translate: -50%;
       filter: var(--dropdown-arrow-color);
     }
+
+    @include abstracts.breakpoint(lg) {
+      border-radius: 0;
+      background: transparent;
+      box-shadow: none;
+      padding: 0 30px;
+
+      &::before {
+        content: none;
+      }
+    }
   }
 }
 
@@ -39,6 +55,12 @@
     width: var(--main-column-width);
     overflow-y: auto;
     border-right: 1px solid var(--top-menu-border-color);
+
+    @include abstracts.breakpoint(lg) {
+      width: 100%;
+      height: auto;
+      border-right: none;
+    }
   }
 }
 
@@ -48,6 +70,10 @@
 
   + .menu-column {
     margin-top: 23px;
+  }
+
+  @include abstracts.breakpoint(lg) {
+    margin-top: 10px;
   }
 
   &__content {
@@ -63,6 +89,10 @@
 
     @include abstracts.breakpoint(xl) {
       display: none;
+    }
+
+    @include abstracts.breakpoint(lg) {
+      display: block;
     }
   }
 
@@ -88,10 +118,18 @@
     font-size: 1.6rem;
     font-weight: 500;
     line-height: 150%;
+
+    @include abstracts.breakpoint(lg) {
+      margin-bottom: 25px;
+    }
   }
 
   &__list {
     margin-top: 20px;
+
+    @include abstracts.breakpoint(lg) {
+      margin-top: 0;
+    }
   }
 
   &__item {
@@ -133,6 +171,12 @@
   padding-left: var(--inner-padding);
   overflow-y: auto;
 
+  @include abstracts.breakpoint(lg) {
+    position: inherit;
+    grid-template-columns: 1fr;
+    padding-left: 0;
+  }
+
   &-not-main {
     position: initial;
     inset: initial;
@@ -140,5 +184,10 @@
     height: var(--max-inner-height);
     grid-template-columns: repeat(4, 1fr);
     padding-left: 0;
+
+    @include abstracts.breakpoint(lg) {
+      grid-template-columns: 1fr;
+      height: auto;
+    }
   }
 }
