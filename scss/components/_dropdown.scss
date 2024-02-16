@@ -7,7 +7,7 @@
   left: 0;
   display: none;
 
-  @include abstracts.sreen(lg) {
+  @include abstracts.screen(lg) {
     position: inherit;
     padding-top: 0;
   }
@@ -30,7 +30,7 @@
       filter: var(--dropdown-arrow-color);
     }
 
-    @include abstracts.sreen(lg) {
+    @include abstracts.screen(lg) {
       border-radius: 0;
       background: transparent;
       box-shadow: none;
@@ -56,7 +56,7 @@
     overflow-y: auto;
     border-right: 1px solid var(--top-menu-border-color);
 
-    @include abstracts.sreen(lg) {
+    @include abstracts.screen(lg) {
       width: 100%;
       height: auto;
       border-right: none;
@@ -72,7 +72,7 @@
     margin-top: 23px;
   }
 
-  @include abstracts.sreen(lg) {
+  @include abstracts.screen(lg) {
     margin-top: 10px;
   }
 
@@ -87,11 +87,11 @@
     height: 36px;
     width: 36px;
 
-    @include abstracts.sreen(xl) {
+    @include abstracts.screen(xl) {
       display: none;
     }
 
-    @include abstracts.sreen(lg) {
+    @include abstracts.screen(lg) {
       display: block;
     }
   }
@@ -119,7 +119,7 @@
     font-weight: 500;
     line-height: 150%;
 
-    @include abstracts.sreen(lg) {
+    @include abstracts.screen(lg) {
       margin-bottom: 25px;
     }
   }
@@ -127,7 +127,7 @@
   &__list {
     margin-top: 20px;
 
-    @include abstracts.sreen(lg) {
+    @include abstracts.screen(lg) {
       margin-top: 0;
     }
   }
@@ -171,7 +171,7 @@
   padding-left: var(--inner-padding);
   overflow-y: auto;
 
-  @include abstracts.sreen(lg) {
+  @include abstracts.screen(lg) {
     position: inherit;
     grid-template-columns: 1fr;
     padding-left: 0;
@@ -185,7 +185,7 @@
     grid-template-columns: repeat(4, 1fr);
     padding-left: 0;
 
-    @include abstracts.sreen(lg) {
+    @include abstracts.screen(lg) {
       grid-template-columns: 1fr;
       height: auto;
     }
