@@ -178,6 +178,13 @@ select {
   filter: var(--icon-color);
 }
 
+@media (max-width: 575.98px) {
+  .container {
+    padding-left: 20px !important;
+    padding-right: 20px !important;
+  }
+}
+
 .row > *, .container-fluid, .container {
   padding-left: calc(var(--grid-gutter-x) * 0.5);
   padding-right: calc(var(--grid-gutter-x) * 0.5);
@@ -2072,7 +2079,6 @@ html {
 }
 .home__cate {
   --grid-gutter-x: 51px;
-  margin-top: 20px;
 }
 @media (max-width: 991.98px) {
   .home__cate {
