@@ -177,6 +177,10 @@ select {
   -webkit-tap-highlight-color: transparent;
 }
 
+input {
+  background: transparent;
+}
+
 .icon {
   filter: var(--icon-color);
 }
@@ -1351,6 +1355,10 @@ html.dark {
   --product-card-shadow: #00000033;
   --like-btn-bg: #292e39;
   --like-btn-shadow: #7c7c7c33;
+  --filter-form-bg: var(--dropdown-bg-color);
+  --filter-form-shadow: var(--dropdown-shadow-color);
+  --filter-form-tag-bg: var(--filter-btn-bg);
+  --filter-arrow-color: var(--dropdown-arrow-color);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1388,6 +1396,7 @@ html {
   --filter-form-bg: #fff;
   --filter-form-shadow: #c8c8c866;
   --filter-form-tag-bg: #f8f8fb;
+  --filter-arrow-color: #fff;
 }
 @media (max-width: 991.98px) {
   html {
@@ -2038,6 +2047,7 @@ html {
   font-weight: 400;
 }
 .btn--primary {
+  color: #1a162e;
   background: #ffb700;
 }
 .btn--outline {
@@ -2117,13 +2127,33 @@ html {
   border-radius: 20px;
   padding: 31px 30px;
   background: var(--filter-form-bg);
+  transition: opacity, visibility;
+  transition-duration: 0.2s;
   box-shadow: 0px 40px 90px 20px var(--filter-form-shadow);
+}
+@media (max-width: 1199.98px) {
+  .filter {
+    height: calc(100vh - 80px);
+    overflow-y: auto;
+    padding-bottom: 0;
+    overscroll-behavior: container;
+  }
+}
+@media (max-width: 575.98px) {
+  .filter {
+    width: 85vw;
+  }
+}
+.filter.hide {
+  opacity: 0;
+  visibility: hidden;
 }
 .filter__arrow {
   position: absolute;
   top: -13px;
   right: 23px;
   height: 20.5px;
+  filter: var(--filter-arrow-color);
 }
 .filter__heading {
   font-size: 2.2rem;
@@ -2188,6 +2218,11 @@ html {
   height: 36px;
   padding: 0 12px;
 }
+@media (max-width: 575.98px) {
+  .filter__form-text-input {
+    width: 100%;
+  }
+}
 .filter__form-text-input--small .filter__form-input {
   font-size: 1.4rem;
 }
@@ -2250,20 +2285,41 @@ html {
   margin: 0 30px;
   background: #eeeeee;
 }
+@media (max-width: 1199.98px) {
+  .filter__separate {
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+  }
+}
 .filter__footer {
   display: flex;
   justify-content: flex-end;
   margin-top: 32px;
 }
+@media (max-width: 1199.98px) {
+  .filter__footer {
+    position: sticky;
+    bottom: 0px;
+    padding-bottom: 16px;
+    background: var(--filter-form-bg);
+  }
+}
 .filter__cancel, .filter__submit {
   height: 38px;
   padding: 0 10px;
+  flex: 1;
 }
 .filter__cancel {
   font-size: 1.5rem;
 }
 .filter__submit {
   font-size: 1.4rem;
+}
+@media (max-width: 1199.98px) {
+  .filter__content {
+    flex-direction: column;
+  }
 }
 
 .home__container {

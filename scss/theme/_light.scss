@@ -49,6 +49,7 @@ html {
   --filter-form-bg: #fff;
   --filter-form-shadow: #c8c8c866;
   --filter-form-tag-bg: #f8f8fb;
+  --filter-arrow-color: #fff;
 
   @include abstracts.screen(md) {
     --cate-item-bg: #fff;
