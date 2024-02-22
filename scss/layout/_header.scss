@@ -107,6 +107,10 @@
       height: calc(100% - 40px);
     }
 
+    @include abstracts.screen(xl) {
+      margin-left: -15px;
+    }
+
     @include abstracts.screen(md) {
       height: calc(100% - 140px);
     }
@@ -227,6 +231,10 @@
     width: 50px;
     border-radius: 8px;
     cursor: pointer;
+
+    @include abstracts.screen(xl) {
+      margin-left: 0;
+    }
   }
 }
 
