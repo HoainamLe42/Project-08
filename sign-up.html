@@ -92,13 +92,22 @@
                                     id=""
                                     placeholder="Email"
                                     class="form__input"
+                                    required
                                 />
+
                                 <img
                                     src="./assets/icons/message.svg"
                                     alt=""
                                     class="form__input-icon"
                                 />
+
+                                <img
+                                    src="./assets/icons/form-error.svg"
+                                    alt=""
+                                    class="form__input-icon-error"
+                                />
                             </div>
+                            <p class="form__error">Email chưa đúng định dạng</p>
                         </div>
 
                         <div class="form__group">
@@ -109,13 +118,23 @@
                                     id=""
                                     placeholder="Password"
                                     class="form__input"
+                                    required
+                                    minlength="6"
                                 />
+
                                 <img
                                     src="./assets/icons/lock.svg"
                                     alt=""
                                     class="form__input-icon"
                                 />
+
+                                <img
+                                    src="./assets/icons/form-error.svg"
+                                    alt=""
+                                    class="form__input-icon-error"
+                                />
                             </div>
+                            <p class="form__error">Mật khẩu tối đa 6 kí tự</p>
                         </div>
 
                         <div class="form__group">
@@ -126,13 +145,23 @@
                                     id=""
                                     placeholder="Confirm Password"
                                     class="form__input"
+                                    required
+                                    minlength="6"
                                 />
+
                                 <img
                                     src="./assets/icons/lock.svg"
                                     alt=""
                                     class="form__input-icon"
                                 />
+
+                                <img
+                                    src="./assets/icons/form-error.svg"
+                                    alt=""
+                                    class="form__input-icon-error"
+                                />
                             </div>
+                            <p class="form__error">Mật khẩu tối đa 6 kí tự</p>
                         </div>
 
                         <div class="form__group form__group-inline">
@@ -141,7 +170,8 @@
                                     type="checkbox"
                                     name=""
                                     id=""
-                                    class="form__checkbox-input"
+                                    class="form__checkbox-input d-none"
+                                    checked
                                 />
                                 <span class="form__checkbox-label"
                                     >Set as default card</span
@@ -153,7 +183,9 @@
                         </div>
 
                         <div class="form__group auth__btn-group">
-                            <button class="btn btn--primary auth__btn">
+                            <button
+                                class="btn btn--primary auth__btn form__submit-btn"
+                            >
                                 Sign Up
                             </button>
                             <button

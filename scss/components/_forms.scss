@@ -1,10 +1,31 @@
 .form {
+  &:has(:invalid) &__submit-btn {
+    opacity: 0.5;
+    pointer-events: none;
+  }
+
   &__group {
     margin-top: 30px;
 
     &-inline {
       display: flex;
       align-items: center;
+    }
+  }
+
+  &__group:has(:invalid):has(&__input:not(:placeholder-shown)) {
+    .form__text-input {
+      border-color: red;
+      background: rgba($color: red, $alpha: 0.1);
+    }
+
+    .form__error,
+    .form__input-icon-error {
+      display: block;
+    }
+
+    .form__input-icon {
+      display: none;
     }
   }
 
@@ -44,16 +65,65 @@
   }
 
   &__checkbox {
+    position: relative;
     display: flex;
     align-items: center;
+    user-select: none;
 
     gap: 10px;
 
+    &::after,
+    &::before {
+      content: "";
+      position: absolute;
+    }
+
+    &::before {
+      top: 0px;
+      left: 0px;
+      height: 19px;
+      width: 19px;
+      border-radius: 5px;
+      border: 1.5px solid #9e9da8;
+    }
+
     &-label {
+      margin-left: 29px;
       font-size: 1.5rem;
       font-weight: 500;
       line-height: 146.667%;
       color: var(--form-checkbox-label-color);
+    }
+  }
+
+  &__error {
+    margin-top: 10px;
+    color: red;
+    text-align: left;
+    display: none;
+  }
+
+  &__input-icon-error {
+    display: none;
+    margin-left: 12px;
+
+    animation: shake 0.7s;
+  }
+
+  &__checkbox:has(:checked) {
+    &::before {
+      border-color: #ffb700;
+      background: #ffb700;
+    }
+
+    &::after {
+      width: 13px;
+      height: 7px;
+      top: 4px;
+      left: 3px;
+      border: 2px solid;
+      border-color: transparent transparent #fff #fff;
+      rotate: -45deg;
     }
   }
 }
