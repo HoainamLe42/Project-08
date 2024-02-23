@@ -34,6 +34,7 @@ a,
 img,
 button,
 input,
+label,
 textarea,
 select {
   padding: 0;
@@ -41,6 +42,8 @@ select {
   color: inherit;
   outline: none;
   border: none;
+
+  // Tắt tabhightlight
   -webkit-tap-highlight-color: transparent;
 }
 
