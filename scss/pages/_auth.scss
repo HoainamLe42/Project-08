@@ -33,6 +33,7 @@
     }
 
     &-img {
+      width: var(--width);
       max-width: 100%;
     }
 
@@ -118,9 +119,24 @@
     }
   }
 
+  &__message {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 30px;
+
+    &-icon {
+      height: 20px;
+    }
+  }
+
   &__form {
     width: 100%;
     margin-top: 30px;
+
+    &-forgot {
+      margin-top: 10px;
+    }
 
     @include abstracts.screen(md) {
       margin-top: 0;
@@ -164,6 +180,9 @@
   }
 
   &__text {
+    display: flex;
+    align-items: center;
+
     margin-top: 90px;
     font-size: 1.8rem;
     font-weight: 400;
@@ -176,8 +195,20 @@
       font-size: 1.6rem;
     }
 
+    &-back-icon {
+      margin-right: 10px;
+      height: 20px;
+      filter: brightness(0) saturate(100%) invert(28%) sepia(65%)
+        saturate(2884%) hue-rotate(195deg) brightness(92%) contrast(101%);
+    }
+
     &-link {
       font-size: inherit;
     }
+  }
+
+  &__fogot-password {
+    display: flex;
+    align-items: center;
   }
 }
