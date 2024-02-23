@@ -49,4 +49,21 @@ html.dark {
   --filter-form-shadow: var(--dropdown-shadow-color);
   --filter-form-tag-bg: var(--filter-btn-bg);
   --filter-arrow-color: var(--dropdown-arrow-color);
+
+  // Sign Up
+  --auth-intro-bg: #171c28;
+  --auth-intro-text-color: #b9babe;
+  --auth-content-bg: #292e39;
+  --auth-heading-color: #b9babe;
+  --auth-btn-connect-color: #b9babe;
+  --auth-btn-connect-icon: brightness(0) saturate(100%) invert(92%) sepia(7%)
+    saturate(108%) hue-rotate(190deg) brightness(82%) contrast(87%);
+  --form-input-color: #b9babe;
+  --form-checkbox-label-color: #b9babe;
+  --form-text-input-border-color: #b9babe;
+
+  @include abstracts.screen(md) {
+    // Sign up
+    --auth-intro-bg: #171c28;
+  }
 }

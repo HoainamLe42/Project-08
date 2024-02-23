@@ -44,7 +44,7 @@ $error-color: #ed4337;
     height: 50px;
     padding: 0 12px;
     border-radius: 10px;
-    border: 1.5px solid #d2d1d6;
+    border: 1.5px solid var(--form-text-input-border-color);
 
     &:focus-within {
       border-color: #76dae6;
@@ -62,7 +62,6 @@ $error-color: #ed4337;
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
-
     &-icon {
       margin-left: 12px;
     }
