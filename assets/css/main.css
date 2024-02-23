@@ -2600,8 +2600,7 @@ html {
   translate: -50%;
 }
 .auth__intro-img {
-  width: var(--width);
-  max-width: 100%;
+  width: min(424px, 100%);
 }
 .auth__intro-text {
   font-size: 1.8rem;
