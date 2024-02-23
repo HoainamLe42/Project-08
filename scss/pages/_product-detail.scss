@@ -64,3 +64,43 @@
     }
   }
 }
+
+.prod-info {
+  padding: 60px;
+  background: var(--prod-info-bg);
+
+  &__heading {
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 138.461%;
+    padding-right: 20px;
+    margin-bottom: 30px;
+  }
+}
+
+.prod-prop {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 20px;
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
+  &__desc {
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 142.857%;
+  }
+
+  &__label {
+    margin-top: 30px;
+  }
+
+  &__group {
+    margin-top: 20px;
+  }
+}
