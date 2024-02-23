@@ -1381,6 +1381,10 @@ html.dark {
   --form-input-color: #b9babe;
   --form-checkbox-label-color: #b9babe;
   --form-text-input-border-color: #b9babe;
+  --product-detail-bg: #292e39;
+  --breadcrumbs-bg: #171c28;
+  --breadcrumbs-shadow-color: #171c2833;
+  --breadcrumbs-link-current-color: var(--text-color);
 }
 @media (max-width: 991.98px) {
   html.dark {
@@ -1430,6 +1434,10 @@ html {
   --form-input-color: #d2d1d6;
   --form-checkbox-label-color: #9e9da8;
   --form-text-input-border-color: #d2d1d6;
+  --product-detail-bg: #fff;
+  --breadcrumbs-bg: #f6f6f6;
+  --breadcrumbs-shadow-color: #ededf633;
+  --breadcrumbs-link-current-color: var(--text-color);
 }
 @media (max-width: 991.98px) {
   html {
@@ -2538,6 +2546,41 @@ html {
   border: 1.5px solid rgb(1, 171, 86);
 }
 
+.breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  border-radius: 10px;
+  padding: 20px;
+  gap: 20px;
+  background: var(--breadcrumbs-bg);
+  box-shadow: 0px 20px 60px 10px var(--breadcrumbs-shadow-color);
+  min-height: 64px;
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs {
+    gap: 16px;
+  }
+}
+.breadcrumbs__link {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  white-space: nowrap;
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+  color: #9e9da8;
+}
+@media (max-width: 767.98px) {
+  .breadcrumbs__link {
+    font-size: 1.4rem;
+  }
+}
+.breadcrumbs__link-current {
+  color: var(--breadcrumbs-link-current-color);
+}
+
 .home__container {
   margin-top: 40px;
 }
@@ -2756,6 +2799,17 @@ html {
 .auth__fogot-password {
   display: flex;
   align-items: center;
+}
+
+.product-page {
+  display: flex;
+  flex-direction: column;
+  height: 80vh;
+  background: var(--product-detail-bg);
+}
+
+.product-container {
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */

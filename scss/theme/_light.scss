@@ -65,4 +65,12 @@ html {
     // Sign up
     --auth-intro-bg: #fff;
   }
+
+  // Product detail
+  --product-detail-bg: #fff;
+
+  // Breadcrumbs
+  --breadcrumbs-bg: #f6f6f6;
+  --breadcrumbs-shadow-color: #ededf633;
+  --breadcrumbs-link-current-color: var(--text-color);
 }
