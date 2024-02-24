@@ -2809,7 +2809,7 @@ html {
 .product-page {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 90vh;
   background: var(--product-detail-bg);
 }
 
@@ -2872,6 +2872,47 @@ html {
   line-height: 138.461%;
   padding-right: 20px;
   margin-bottom: 30px;
+}
+.prod-info__card {
+  width: 318px;
+  height: 186px;
+  border-radius: 6px;
+  padding: 20px;
+  border: 1px solid #b9babe;
+}
+.prod-info__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.prod-info__price {
+  font-size: 1.6rem;
+  font-weight: 500;
+  line-height: 150%;
+}
+.prod-info__tax {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+  padding: 2px 8px;
+  color: #67b044;
+  background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), linear-gradient(0deg, #67b044, #67b044);
+}
+.prod-info__total-price {
+  margin: 20px 0;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 138.461%;
+}
+.prod-info__add-to-cart {
+  flex: 1;
+}
+.prod-info__like-btn {
+  margin-left: 10px;
+  height: 46px;
+  width: 46px;
+  border-radius: 6px;
+  border: 1px solid #d2d1d6;
 }
 
 .prod-prop {

@@ -1,7 +1,7 @@
 .product-page {
   display: flex;
   flex-direction: column;
-  height: 80vh;
+  height: 90vh;
 
   background: var(--product-detail-bg);
 }
@@ -75,6 +75,63 @@
     line-height: 138.461%;
     padding-right: 20px;
     margin-bottom: 30px;
+  }
+
+  &__card {
+    width: 318px;
+    height: 186px;
+    border-radius: 6px;
+    padding: 20px;
+    border: 1px solid #b9babe;
+  }
+
+  &__row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__price {
+    font-size: 1.6rem;
+    font-weight: 500;
+    line-height: 150%;
+  }
+
+  &__tax {
+    font-size: 1.4rem;
+    font-weight: 500;
+    line-height: 142.857%;
+
+    padding: 2px 8px;
+
+    color: #67b044;
+
+    background: linear-gradient(
+        0deg,
+        rgba(255, 255, 255, 0.8),
+        rgba(255, 255, 255, 0.8)
+      ),
+      linear-gradient(0deg, #67b044, #67b044);
+  }
+
+  &__total-price {
+    margin: 20px 0;
+
+    font-size: 2.6rem;
+    font-weight: 500;
+    line-height: 138.461%;
+  }
+
+  &__add-to-cart {
+    flex: 1;
+  }
+
+  &__like-btn {
+    margin-left: 10px;
+    height: 46px;
+    width: 46px;
+    border-radius: 6px;
+    border: 1px solid #d2d1d6;
   }
 }
 
