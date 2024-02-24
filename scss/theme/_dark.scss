@@ -11,7 +11,7 @@ html.dark {
   --top-act-group-separate: #ededf6;
   --top-act-group-shadow: #00000033;
 
-  @include abstracts.screen(lg) {
+  @include abstracts.screen(md) {
     --header-shadow-color: rgba(0, 0, 0, 0.2);
   }
 
@@ -74,4 +74,18 @@ html.dark {
   --breadcrumbs-bg: #171c28;
   --breadcrumbs-shadow-color: #171c2833;
   --breadcrumbs-link-current-color: var(--text-color);
+
+  // Product info
+  --prod-info-bg: #171c28;
+  --prod-tag-bg: rgb(158, 157, 168, 0.2);
+
+  @include abstracts.screen(md) {
+    --prod-info-container-bg: #171c28;
+    --prod-info-bg: #171c28;
+  }
+
+  // Search bar
+  --search-bar-bg: #171c28;
+  --search-bar-icon-color: brightness(0) saturate(100%) invert(80%) sepia(0%)
+    saturate(796%) hue-rotate(272deg) brightness(94%) contrast(92%);
 }

@@ -11,7 +11,7 @@ html {
   --top-act-group-shadow: #ededf633;
   --top-act-group-separate: #ededf6;
 
-  @include abstracts.screen(lg) {
+  @include abstracts.screen(md) {
     --header-bg-color: #fff;
     --header-shadow-color: rgba(237, 237, 246, 0.2);
   }
@@ -69,11 +69,28 @@ html {
   // Product detail
   --product-detail-bg: #fff;
 
+  @include abstracts.screen(md) {
+    --product-detail-bg: rgb(210, 210, 213, 0.3);
+  }
+
   // Breadcrumbs
   --breadcrumbs-bg: #f6f6f6;
   --breadcrumbs-shadow-color: #ededf633;
   --breadcrumbs-link-current-color: var(--text-color);
 
+  @include abstracts.screen(md) {
+    --breadcrumbs-bg: #fff;
+  }
+
   // Product info
   --prod-info-bg: #f6f6f6;
+  --prod-tag-bg: rgba(158, 157, 168, 0.2);
+
+  @include abstracts.screen(md) {
+    --prod-info-container-bg: #fff;
+    --prod-info-bg: #fff;
+  }
+
+  // Search bar
+  --search-bar-bg: #fff;
 }

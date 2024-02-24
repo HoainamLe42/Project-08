@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -44,6 +44,27 @@
         <!-- MAIN -->
         <main class="product-page">
             <div class="container">
+                <!-- Search bar -->
+                <div class="product-container">
+                    <div class="search-bar d-none d-md-flex">
+                        <input
+                            type="text"
+                            name=""
+                            id=""
+                            placeholder="Search for item . . . ."
+                            class="search-bar__input"
+                        />
+                        <button class="search-bar__submit">
+                            <img
+                                src="./assets/icons/search.svg"
+                                alt=""
+                                class="search-bar__icon"
+                            />
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Breadcrumbs  -->
                 <div class="product-container">
                     <!-- Breadcrumbs -->
                     <ul class="breadcrumbs">
@@ -85,7 +106,7 @@
                 </div>
 
                 <!-- Product info -->
-                <div class="product-container">
+                <div class="product-container prod-info-container">
                     <div class="row">
                         <!-- Product left -->
                         <div class="col-5 col-xl-6 col-lg-12">
@@ -180,7 +201,7 @@
                                                 class="form__label prod-prop__label"
                                                 >Size/Weight</label
                                             >
-                                            <div class="filter__form-group">
+                                            <div class="form__group">
                                                 <div class="form__select-wrap">
                                                     <div
                                                         class="form__select"
@@ -208,13 +229,19 @@
                                                 class="form__group prod-prop__group"
                                             >
                                                 <div class="form__tags">
-                                                    <button class="form__tag">
+                                                    <button
+                                                        class="form__tag prod-prop__tag"
+                                                    >
                                                         Small
                                                     </button>
-                                                    <button class="form__tag">
+                                                    <button
+                                                        class="form__tag prod-prop__tag"
+                                                    >
                                                         Medium
                                                     </button>
-                                                    <button class="form__tag">
+                                                    <button
+                                                        class="form__tag prod-prop__tag"
+                                                    >
                                                         Large
                                                     </button>
                                                 </div>
@@ -227,7 +254,7 @@
                                                     <img
                                                         src="./assets/icons/document.svg"
                                                         alt=""
-                                                        class="prod-prop__icon"
+                                                        class="prod-prop__icon icon"
                                                     />
                                                     <h4
                                                         class="prod-prop__title"
@@ -239,7 +266,7 @@
                                                     <img
                                                         src="./assets/icons/buy.svg"
                                                         alt=""
-                                                        class="prod-prop__icon"
+                                                        class="prod-prop__icon icon"
                                                     />
                                                     <div>
                                                         <h4
@@ -258,7 +285,7 @@
                                                     <img
                                                         src="./assets/icons/bag.svg"
                                                         alt=""
-                                                        class="prod-prop__icon"
+                                                        class="prod-prop__icon icon"
                                                     />
                                                     <div>
                                                         <h4
