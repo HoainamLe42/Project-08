@@ -1,21 +1,37 @@
+@use "../abstracts";
+
 .product-page {
   display: flex;
   flex-direction: column;
-  height: 90vh;
+  height: 2000px;
 
   background: var(--product-detail-bg);
 }
 
 .product-container {
   margin-top: 30px;
+
+  @include abstracts.screen(lg) {
+    margin-top: 0;
+  }
 }
 
 .prod-preview {
   padding: 0 30px;
 
+  @include abstracts.screen(lg) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
   &__list {
     display: flex;
     overflow: hidden;
+
+    @include abstracts.screen(lg) {
+      // Để cho nó chiếm phần diện tích còn lại
+      flex: 1;
+    }
   }
 
   &__item {
@@ -40,6 +56,12 @@
     justify-content: center;
     gap: 16px;
     padding: 30px;
+
+    @include abstracts.screen(lg) {
+      flex-direction: column-reverse;
+
+      padding-left: 0;
+    }
   }
 
   &__thumb {
@@ -69,17 +91,23 @@
   padding: 60px;
   background: var(--prod-info-bg);
 
+  @include abstracts.screen(xxl) {
+    padding: 40px;
+  }
+
   &__heading {
     font-size: 2.6rem;
     font-weight: 500;
     line-height: 138.461%;
     padding-right: 20px;
     margin-bottom: 30px;
+
+    @include abstracts.screen(md) {
+      margin-bottom: 10px;
+    }
   }
 
   &__card {
-    width: 318px;
-    height: 186px;
     border-radius: 6px;
     padding: 20px;
     border: 1px solid #b9babe;
@@ -120,6 +148,10 @@
     font-size: 2.6rem;
     font-weight: 500;
     line-height: 138.461%;
+
+    @include abstracts.screen(xxl) {
+      margin: 10px 0;
+    }
   }
 
   &__add-to-cart {
@@ -132,6 +164,19 @@
     width: 46px;
     border-radius: 6px;
     border: 1px solid #d2d1d6;
+  }
+}
+
+.prod-props {
+  margin-left: 30px;
+
+  @include abstracts.screen(xxl) {
+    margin-left: 10px;
+  }
+
+  @include abstracts.screen(xxl) {
+    margin-top: 20px;
+    margin-left: 0;
   }
 }
 
@@ -155,6 +200,10 @@
 
   &__label {
     margin-top: 30px;
+
+    @include abstracts.screen(md) {
+      margin-top: 0;
+    }
   }
 
   &__group {
