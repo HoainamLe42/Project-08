@@ -3334,9 +3334,12 @@ html {
 .prod-tab__content--current {
   display: block;
 }
+.prod-tab_text-content {
+  margin-top: -20px;
+}
 
 .prod-content__heading {
-  font-size: 2.4rem;
+  font-size: 2.2rem;
   font-weight: 700;
   line-height: 141.667%;
   margin-bottom: 30px;
