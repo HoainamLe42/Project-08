@@ -55,6 +55,10 @@ input {
   filter: var(--icon-color);
 }
 
+li {
+  list-style: none;
+}
+
 .container {
   @include abstracts.screen(sm) {
     padding-left: 20px !important;
