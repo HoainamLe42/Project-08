@@ -6,6 +6,11 @@
   box-sizing: border-box;
 }
 
+* {
+  // Tắt tabhightlight
+  -webkit-tap-highlight-color: transparent;
+}
+
 html {
   font-size: 62.5%;
 }
@@ -42,9 +47,6 @@ select {
   color: inherit;
   outline: none;
   border: none;
-
-  // Tắt tabhightlight
-  -webkit-tap-highlight-color: transparent;
 }
 
 input {
