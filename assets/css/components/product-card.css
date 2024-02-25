@@ -48,5 +48,8 @@
   margin-bottom: 6px;
   padding-right: 9px;
 }
+.product-card__review {
+  background: var(--product-card-review-bg);
+}
 
 /*# sourceMappingURL=product-card.css.map */

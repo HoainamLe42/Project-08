@@ -60,4 +60,8 @@
     margin-bottom: 6px;
     padding-right: 9px;
   }
+
+  &__review {
+    background: var(--product-card-review-bg);
+  }
 }
