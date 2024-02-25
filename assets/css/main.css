@@ -1365,6 +1365,9 @@ html.dark {
   --top-act-bg-color: #292e39;
   --top-act-group-separate: #ededf6;
   --top-act-group-shadow: #00000033;
+  --header-act-dropdown-bg: #292e39;
+  --header-act-dropdown-shadow: rgba(23, 28, 40, 0.4);
+  --header-act-dropdown-arrow-up: #292e39;
   --dropdown-bg-color: #2f3441;
   --dropdown-shadow-color: #171c2866;
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(15%) sepia(5%)
@@ -1437,7 +1440,8 @@ html {
   --top-act-group-shadow: #ededf633;
   --top-act-group-separate: #ededf6;
   --header-act-dropdown-bg: #fff;
-  --header-act-dropdown-shadow: 0px 40px 90px 20px rgba(200, 200, 200, 0.4);
+  --header-act-dropdown-shadow: rgba(200, 200, 200, 0.4);
+  --header-act-dropdown-arrow-up: #fff;
   --dropdown-bg-color: #fff;
   --dropdown-shadow-color: #c8c8c866;
   --dropdown-arrow-color: brightness(0) saturate(100%) invert(94%) sepia(100%)
@@ -1718,8 +1722,13 @@ html {
 .top-act__group-single .top-act__btn {
   padding: 13px 12px 13px 14px;
 }
-.top-act__btn {
+.top-act__btn-wrap {
   position: relative;
+}
+.top-act__btn-wrap:hover .act-dropdown {
+  visibility: visible;
+}
+.top-act__btn {
   padding: 13px 20px;
   gap: 10px;
   cursor: pointer;
@@ -1772,15 +1781,25 @@ html {
 /* act dropdown */
 .act-dropdown {
   position: absolute;
-  top: 72px;
+  top: 47px;
   right: -66px;
   width: min(500px, 100vw);
+  visibility: hidden;
+  padding-top: 27px;
 }
 .act-dropdown__inner {
+  position: relative;
   padding: 30px;
   border-radius: 20px;
   background: var(--header-act-dropdown-bg);
   box-shadow: 0px 40px 90px 20px var(--header-act-dropdown-shadow);
+}
+.act-dropdown__arrow-up {
+  position: absolute;
+  top: -18px;
+  right: 101px;
+  height: 20.5px;
+  filter: var(--dropdown-arrow-color);
 }
 .act-dropdown__top {
   display: flex;
