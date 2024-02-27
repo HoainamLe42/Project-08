@@ -388,6 +388,12 @@
       font-size: 1.8rem !important;
     }
   }
+
+  &__separate {
+    height: 1px;
+    margin: 20px 0;
+    background: #d2d1d6;
+  }
 }
 
 .cart-preview-item {
