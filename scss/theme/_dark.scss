@@ -4,7 +4,8 @@ html.dark {
   --text-color: #fff;
   --icon-color: brightness(0) saturate(100%) invert(94%) sepia(100%)
     saturate(0%) hue-rotate(232deg) brightness(106%) contrast(108%);
-
+  --icon-color-1: brightness(0) saturate(100%) invert(77%) sepia(0%)
+    saturate(643%) hue-rotate(79deg) brightness(99%) contrast(88%);
   --header-bg-color: #171c28;
   --body-bg: #292e39;
   --top-act-bg-color: #292e39;
@@ -97,4 +98,23 @@ html.dark {
   // Review card
   --review-card-bg: #171c28;
   --product-card-review-bg: #171c28;
+
+  // Check out
+  --cart-info-continue-link: #b9babe;
+  --cart-item-title-color: #b9babe;
+  --cart-item-border-color: #292e39;
+  --cart-item-input-border-color: #292e39;
+  --checkout-page-bg: #292e39;
+  --checkout-breadcrumbs-bg: #171c28;
+  --cart-info-bg: #171c28;
+  --cart-info-shadow: rgba(23, 28, 40, 0.2);
+
+  // Gift item
+  --gift-item-color: #b9babe;
+  --gift-item-bg: #292e39;
+  --gift-item-shadow: none;
+
+  // Dialog
+  --dialog-content-bg: #292e39;
+  --dialog-content-shadow: rgba(23, 28, 40, 0.2);
 }

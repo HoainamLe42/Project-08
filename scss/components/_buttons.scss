@@ -36,6 +36,7 @@
   justify-content: center;
   gap: 10px;
 
+  white-space: nowrap;
   height: 46px;
   padding: 0 20px;
   border-radius: 6px;
@@ -53,8 +54,12 @@
     }
   }
 
+  &--small {
+    height: 40px;
+    padding: 0 16px;
+  }
+
   &--text {
-    color: #9e9da8;
     background: transparent;
     font-weight: 400;
   }
