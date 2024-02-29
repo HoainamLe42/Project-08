@@ -2306,7 +2306,6 @@ html {
 }
 .btn--small {
   height: 40px;
-  padding: 0 16px;
 }
 .btn--text {
   background: transparent;
@@ -3583,6 +3582,11 @@ html {
   font-weight: 700;
   line-height: 141.667%;
 }
+@media (max-width: 767.98px) {
+  .cart-info__heading {
+    font-size: 1.8rem;
+  }
+}
 .cart-info__sub-heading {
   margin: 30px 0;
   font-size: 1.8rem;
@@ -3623,6 +3627,11 @@ html {
   margin: 30px 0;
   height: 1px;
   background: var(--cart-item-border-color);
+}
+@media (max-width: 767.98px) {
+  .cart-info__separate {
+    margin: 16px 0;
+  }
 }
 .cart-info__separate--right {
   margin: 20px 0;
@@ -3871,11 +3880,23 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 16px;
+}
+@media (max-width: 767.98px) {
+  .user-address__top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .user-address__title {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+}
+@media (max-width: 767.98px) {
+  .user-address__title {
+    font-size: 1.6rem;
+  }
 }
 .user-address__desc {
   margin-top: 4px;
@@ -3883,44 +3904,62 @@ html {
   font-weight: 400;
   line-height: 146.667%;
 }
+@media (max-width: 767.98px) {
+  .user-address__desc {
+    font-size: 1.4rem;
+  }
+}
+.user-address__message {
+  margin-top: 30px;
+  font-weight: 500;
+}
+.user-address__link {
+  margin-left: 10px;
+  padding: 10px;
+  border-radius: 20px;
+  color: #0071dc;
+  border: 1px dashed #0071dc;
+}
+.user-address__link-add {
+  margin-right: 10px;
+}
 
 .address-card {
   margin-top: 30px;
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 767.98px) {
+  .address-card {
+    flex-direction: column;
+    gap: 16px;
+  }
+}
 .address-card__left {
   display: flex;
   gap: 16px;
-}
-.address-card__choose {
-  position: relative;
-  height: 19px;
-  width: 19px;
-  top: 2px;
-  border-radius: 5px;
-  background: #67b044;
-}
-.address-card__choose::after {
-  position: absolute;
-  content: "";
-  height: 7px;
-  width: 12px;
-  rotate: -45deg;
-  top: 4px;
-  left: 3px;
-  border-bottom: 2px solid #fff;
-  border-left: 2px solid #fff;
 }
 .address-card__title {
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
+@media (max-width: 767.98px) {
+  .address-card__title {
+    font-size: 1.6rem;
+  }
+}
 .address-card__desc {
+  width: min(520px, 90%);
   margin-top: 4px;
   font-size: 1.5rem;
   font-weight: 400;
+  line-height: 142.857%;
+}
+@media (max-width: 767.98px) {
+  .address-card__desc {
+    font-size: 1.4rem;
+  }
 }
 .address-card__list {
   margin-top: 20px;
@@ -3931,6 +3970,12 @@ html {
   font-size: 1.4rem;
   font-weight: 400;
   line-height: 142.857%;
+}
+@media (max-width: 767.98px) {
+  .address-card__list {
+    margin-top: 16px;
+    gap: 16px;
+  }
 }
 .address-card__list-item {
   list-style: disc inside;
@@ -3947,6 +3992,18 @@ html {
   font-size: 1.8rem;
   font-weight: 400;
   line-height: 144.444%;
+}
+.address-card__checkbox-input {
+  appearance: none;
+}
+.address-card__checkbox-input::after {
+  content: url(../icons/checkbox-uncheck.svg);
+}
+.address-card__checkbox-input:not(:checked) {
+  filter: var(--icon-color);
+}
+.address-card__checkbox-input:checked::after {
+  content: url(../icons/checkbox-checked.svg);
 }
 
 /*# sourceMappingURL=main.css.map */
