@@ -28,6 +28,19 @@
     padding: 16px;
   }
 
+  &__heading {
+    font-size: 2.4rem;
+    font-weight: 700;
+    line-height: 141.667%;
+  }
+
+  &__sub-heading {
+    margin: 30px 0;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
   &__list {
     margin-top: -30px;
 
@@ -327,5 +340,108 @@
     font-size: 1.4rem;
     font-weight: 400;
     line-height: 142.857%;
+  }
+}
+
+// User address
+.user-address {
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
+  &__desc {
+    margin-top: 4px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 146.667%;
+  }
+}
+
+// Address card
+.address-card {
+  margin-top: 30px;
+
+  display: flex;
+  justify-content: space-between;
+
+  &__left {
+    display: flex;
+    gap: 16px;
+  }
+
+  &__choose {
+    position: relative;
+    height: 19px;
+    width: 19px;
+    top: 2px;
+
+    border-radius: 5px;
+    background: #67b044;
+
+    &::after {
+      position: absolute;
+
+      content: "";
+      height: 7px;
+      width: 12px;
+      rotate: -45deg;
+      top: 4px;
+      left: 3px;
+      border-bottom: 2px solid #fff;
+      border-left: 2px solid #fff;
+    }
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
+  &__desc {
+    margin-top: 4px;
+    font-size: 1.5rem;
+    font-weight: 400;
+  }
+
+  &__list {
+    margin-top: 20px;
+    padding-left: 8px;
+
+    display: flex;
+    align-items: center;
+    gap: 30px;
+
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 142.857%;
+
+    &-item {
+      list-style: disc inside;
+    }
+  }
+
+  &__ctrl {
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 144.444%;
+    }
   }
 }
