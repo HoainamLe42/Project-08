@@ -67,6 +67,8 @@ html.dark {
   --form-input-color: #b9babe;
   --form-checkbox-label-color: #b9babe;
   --form-text-input-border-color: #b9babe;
+  --form-select-dialog-shadow: rgba($color: #fff, $alpha: 1);
+  --form-select-dialog-bg: #171c28;
 
   @include abstracts.screen(md) {
     // Sign up

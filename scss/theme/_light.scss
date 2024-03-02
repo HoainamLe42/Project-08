@@ -60,9 +60,12 @@ html {
   --auth-intro-bg: #f6f6f6;
   --auth-intro-text-color: var(--text-color);
   --auth-content-bg: #fff;
+  // Form
   --form-input-color: #d2d1d6;
   --form-checkbox-label-color: #9e9da8;
   --form-text-input-border-color: #d2d1d6;
+  --form-select-dialog-shadow: rgba($color: #000000, $alpha: 0.15);
+  --form-select-dialog-bg: #fff;
 
   @include abstracts.screen(md) {
     --cate-item-bg: #fff;

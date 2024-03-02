@@ -711,7 +711,7 @@
         <!-- Modal : address new shipping address-->
         <div
             id="add-new-address"
-            class="modal hide"
+            class="modal show"
             style="--content-width: 650px"
         >
             <!-- <button class="modal__close">&times;</button> -->
@@ -834,6 +834,12 @@
                                         id="city-dialog"
                                         class="form__select-dialog hide"
                                     >
+                                        <button
+                                            class="form__close-dialog d-none d-sm-block js-toggle"
+                                            toggle-target="#city-dialog"
+                                        >
+                                            &times;
+                                        </button>
                                         <div class="form__search">
                                             <input
                                                 type="text"
@@ -843,7 +849,7 @@
                                             <img
                                                 src="./assets/icons/search.svg"
                                                 alt=""
-                                                class="form__search-icon"
+                                                class="form__search-icon icon"
                                             />
                                         </div>
                                         <ul class="form__options-list">
