@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -192,6 +192,7 @@
                                                         toggle-target="#add-new-address"
                                                     >
                                                         <img
+                                                            class="icon"
                                                             src="./assets/icons/edit.svg "
                                                             alt=""
                                                         />
@@ -252,6 +253,7 @@
                                                         toggle-target="#add-new-address"
                                                     >
                                                         <img
+                                                            class="icon"
                                                             src="./assets/icons/edit.svg "
                                                             alt=""
                                                         />
@@ -706,7 +708,7 @@
             ></div>
         </div>
 
-        <!-- Modal : address new shopping address-->
+        <!-- Modal : address new shipping address-->
         <div
             id="add-new-address"
             class="modal show"
@@ -714,10 +716,10 @@
         >
             <!-- <button class="modal__close">&times;</button> -->
             <div class="modal__content">
-                <h2 class="modal__heading">Add new shopping address</h2>
-                <div class="modal__body">
-                    <div class="form__group">
-                        <form action="" class="form">
+                <form action="" class="form">
+                    <h2 class="modal__heading">Add new shopping address</h2>
+                    <div class="modal__body">
+                        <div class="form__group">
                             <div class="form__row modal__row">
                                 <div class="form__group">
                                     <label
@@ -764,7 +766,7 @@
                                             placeholder="Phone"
                                             class="form__input"
                                             required
-                                            minlength="11"
+                                            minlength="10"
                                         />
 
                                         <img
@@ -842,23 +844,23 @@
                                     >
                                 </label>
                             </div>
-                        </form>
+                        </div>
                     </div>
-                </div>
-                <div class="modal__bottom">
-                    <button
-                        class="modal__btn js-toggle btn btn--text btn--small"
-                        toggle-target="#add-new-address"
-                    >
-                        Cancel
-                    </button>
-                    <button
-                        class="modal__btn js-toggle btn btn--primary btn--small btn-no-margin form__submit-btn"
-                        toggle-target="#add-new-address"
-                    >
-                        Create
-                    </button>
-                </div>
+                    <div class="modal__bottom">
+                        <button
+                            class="modal__btn js-toggle btn btn--text btn--small"
+                            toggle-target="#add-new-address"
+                        >
+                            Cancel
+                        </button>
+                        <button
+                            class="modal__btn js-toggle btn btn--primary btn--small btn-no-margin form__submit-btn"
+                            toggle-target="#add-new-address"
+                        >
+                            Create
+                        </button>
+                    </div>
+                </form>
             </div>
             <div class="modal__overlay"></div>
         </div>
