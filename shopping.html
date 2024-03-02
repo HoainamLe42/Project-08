@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="dark">
+<html lang="en" class="">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -68,7 +68,7 @@
                 <div class="product-container">
                     <!-- Breadcrumbs -->
                     <ul class="breadcrumbs checkout-breadcrumbs">
-                        <li>
+                        <li class="form__option">
                             <a href="./" class="breadcrumbs__link"
                                 >Home
                                 <img
@@ -77,7 +77,7 @@
                                 />
                             </a>
                         </li>
-                        <li>
+                        <li class="form__option">
                             <a href="#!" class="breadcrumbs__link"
                                 >Checkout
                                 <img
@@ -85,7 +85,7 @@
                                     alt=""
                             /></a>
                         </li>
-                        <li>
+                        <li class="form__option">
                             <a
                                 href="#!"
                                 class="breadcrumbs__link breadcrumbs__link-current"
@@ -711,7 +711,7 @@
         <!-- Modal : address new shipping address-->
         <div
             id="add-new-address"
-            class="modal show"
+            class="modal hide"
             style="--content-width: 650px"
         >
             <!-- <button class="modal__close">&times;</button> -->
@@ -816,9 +816,11 @@
                                     <input
                                         type="text"
                                         id="city"
-                                        name=""
+                                        name="hidden"
+                                        autocomplete="false"
                                         placeholder="City/District/Town"
-                                        class="form__input"
+                                        class="form__input js-toggle"
+                                        toggle-target="#city-dialog"
                                     />
 
                                     <img
@@ -826,6 +828,79 @@
                                         alt=""
                                         class="form__input-icon-error"
                                     />
+
+                                    <!-- Form choose city/town -->
+                                    <div
+                                        id="city-dialog"
+                                        class="form__select-dialog hide"
+                                    >
+                                        <div class="form__search">
+                                            <input
+                                                type="text"
+                                                placeholder="Search"
+                                                class="form__search-input"
+                                            />
+                                            <img
+                                                src="./assets/icons/search.svg"
+                                                alt=""
+                                                class="form__search-icon"
+                                            />
+                                        </div>
+                                        <ul class="form__options-list">
+                                            <li class="form__option">Hà Nội</li>
+                                            <li
+                                                class="form__option form__option--current"
+                                            >
+                                                Hồ Chí Minh
+                                            </li>
+                                            <li class="form__option">
+                                                Tiền Giang
+                                            </li>
+                                            <li class="form__option">
+                                                Bến Tre
+                                            </li>
+                                            <li class="form__option">Hà Nội</li>
+                                            <li class="form__option">
+                                                Hồ Chí Minh
+                                            </li>
+                                            <li class="form__option">
+                                                Tiền Giang
+                                            </li>
+                                            <li class="form__option">
+                                                Bến Tre
+                                            </li>
+                                            <li class="form__option">Hà Nội</li>
+                                            <li class="form__option">
+                                                Hồ Chí Minh
+                                            </li>
+                                            <li class="form__option">
+                                                Tiền Giang
+                                            </li>
+                                            <li class="form__option">
+                                                Bến Tre
+                                            </li>
+                                            <li class="form__option">Hà Nội</li>
+                                            <li class="form__option">
+                                                Hồ Chí Minh
+                                            </li>
+                                            <li class="form__option">
+                                                Tiền Giang
+                                            </li>
+                                            <li class="form__option">
+                                                Bến Tre
+                                            </li>
+                                            <li class="form__option">Hà Nội</li>
+                                            <li class="form__option">
+                                                Hồ Chí Minh
+                                            </li>
+                                            <li class="form__option">
+                                                Tiền Giang
+                                            </li>
+                                            <li class="form__option">
+                                                Bến Tre
+                                            </li>
+                                        </ul>
+                                    </div>
                                 </div>
                                 <p class="form__error">
                                     Phone must be at least 11 character
