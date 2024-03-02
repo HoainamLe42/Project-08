@@ -1429,8 +1429,8 @@ html.dark {
   --gift-item-color: #b9babe;
   --gift-item-bg: #292e39;
   --gift-item-shadow: none;
-  --dialog-content-bg: #292e39;
-  --dialog-content-shadow: rgba(23, 28, 40, 0.2);
+  --modal-content-bg: #292e39;
+  --modal-content-shadow: rgba(23, 28, 40, 0.2);
 }
 @media (max-width: 767.98px) {
   html.dark {
@@ -1504,8 +1504,8 @@ html {
   --checkout-breadcrumbs-bg: #fff;
   --cart-info-bg: #fff;
   --cart-info-shadow: rgba(237, 237, 246, 0.2);
-  --dialog-content-bg: #fff;
-  --dialog-content-shadow: rgba(237, 237, 246, 0.2);
+  --modal-content-bg: #fff;
+  --modal-content-shadow: rgba(237, 237, 246, 0.2);
 }
 @media (max-width: 767.98px) {
   html {
@@ -2576,6 +2576,14 @@ html {
   opacity: 0.5;
   pointer-events: none;
 }
+.form__row {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+.form__row > * {
+  flex: 1;
+}
 .form__group {
   margin-top: 30px;
 }
@@ -2599,6 +2607,27 @@ html {
 .form__group:has(:invalid):has(.form__input:not(:placeholder-shown)) .form__input-icon {
   display: none;
 }
+.form__text-area, .form__text-input {
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  border-radius: 10px;
+  border: 1.5px solid var(--form-text-input-border-color);
+}
+.form__text-area--small, .form__text-input--small {
+  border-radius: 8px;
+}
+.form__text-area:focus-within, .form__text-input:focus-within {
+  border-color: #76dae6;
+}
+.form__text-area {
+  height: 100px;
+  padding: 12px;
+}
+.form__text-area-input {
+  width: 100%;
+  resize: none;
+}
 .form__text-input {
   display: flex;
   align-items: center;
@@ -2615,23 +2644,26 @@ html {
     height: 48px;
   }
 }
-.form__input {
+.form__text-input--small {
+  height: 42px;
+}
+.form__input, .form__text-area-input {
   flex: 1;
   height: 100%;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
 }
-.form__input-icon {
-  margin-left: 12px;
-}
-.form__input::placeholder {
+.form__input::placeholder, .form__text-area-input::placeholder {
   color: var(--form-input-color);
 }
 @media (max-width: 767.98px) {
-  .form__input {
+  .form__input, .form__text-area-input {
     font-size: 1.6rem;
   }
+}
+.form__input-icon {
+  margin-left: 12px;
 }
 .form__pull-right {
   margin-left: auto;
@@ -2695,6 +2727,11 @@ html {
   display: block;
   font-size: 2.2rem;
   font-weight: 500;
+}
+.form__label--small {
+  margin-bottom: 10px;
+  font-size: 1.4rem;
+  line-height: 142.857%;
 }
 .form__select-wrap {
   display: flex;
@@ -2986,12 +3023,12 @@ html {
   list-style: disc;
 }
 
-.dialog__overlay, .dialog {
+.modal__overlay, .modal {
   position: fixed;
   inset: 0;
 }
 
-.dialog {
+.modal {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -2999,34 +3036,70 @@ html {
   opacity: 0;
   visibility: hidden;
 }
-.dialog.show {
+.modal.show {
   opacity: 1;
   visibility: visible;
 }
-.dialog__overlay {
+.modal__close {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  z-index: 2;
+  font-size: 3.5rem;
+  padding: 7px 20px;
+  opacity: 0.6;
+}
+.modal__close:hover {
+  opacity: 1;
+}
+.modal__overlay {
   background: rgba(0, 0, 0, 0.2);
 }
-.dialog__content {
+.modal__row {
+  margin-top: -40px;
+}
+.modal__content {
   position: relative;
-  max-width: min(450px, 100% - 40px);
+  z-index: 1;
+  width: min(var(--content-width, 800px), 100% - 40px);
   padding: 30px;
   border-radius: 20px;
-  background: var(--dialog-content-bg);
-  z-index: 1;
-  box-shadow: 0px 20px 60px 10px var(--dialog-content-shadow);
+  background: var(--modal-content-bg);
+  box-shadow: 0px 20px 60px 10px var(--modal-content-shadow);
 }
-.dialog__text {
+.modal--small .modal__content {
+  --content-width: 400px;
+}
+.modal--large .modal__content {
+  --content-width: 1100px;
+}
+.modal--fill .modal__content {
+  width: 100%;
+  height: 100%;
+  border-radius: 0;
+}
+.modal__heading {
+  font-size: 2.4rem;
+  font-weight: 700;
+  line-height: 141.667%;
+}
+.modal__body {
+  padding-right: 10px;
+  overflow-y: auto;
+  max-height: calc(100vh - 100px);
+}
+.modal__text {
   font-size: 1.8rem;
   line-height: 1.5;
 }
-.dialog__bottom {
+.modal__bottom {
   display: flex;
   flex-wrap: wrap;
   margin-top: 30px;
   justify-content: flex-end;
 }
 @media (max-width: 767.98px) {
-  .dialog__btn {
+  .modal__btn {
     flex: 1;
   }
 }
