@@ -42,6 +42,11 @@
     @include abstracts.screen(md) {
       font-size: 1.8rem;
     }
+
+    @include abstracts.screen(sm) {
+      font-size: 1.6rem;
+      font-weight: 600;
+    }
   }
 
   &__sub-heading {
@@ -49,6 +54,11 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
+
+    @include abstracts.screen(md) {
+      font-size: 1.5rem;
+      margin: 20px 0;
+    }
   }
 
   &__list {
@@ -152,6 +162,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 30px;
   }
 
   &__edit {
@@ -188,12 +199,21 @@
     display: flex;
     align-items: center;
     gap: 30px;
-    margin-bottom: 30px;
+    margin: 30px 0;
+
+    @include abstracts.screen(md) {
+      gap: 20px;
+      margin: 20px 0;
+    }
   }
 }
 
 .cart-info + .cart-info {
   margin-top: 30px;
+
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+  }
 }
 
 .cart-item {
@@ -539,6 +559,15 @@
   border-radius: 20px;
   background: var(--payment-item-bg);
 
+  @include abstracts.screen(md) {
+    margin-top: 20px;
+    padding: 16px;
+  }
+
+  @include abstracts.screen(sm) {
+    align-items: flex-start;
+  }
+
   &--pointer {
     cursor: pointer;
   }
@@ -547,6 +576,12 @@
     display: flex;
     align-items: center;
     flex: 1;
+    gap: 14px;
+
+    @include abstracts.screen(sm) {
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   &__info {
@@ -557,6 +592,10 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
+
+    @include abstracts.screen(md) {
+      font-size: 1.6rem;
+    }
   }
 
   &__desc {
@@ -565,19 +604,28 @@
     font-weight: 400;
     line-height: 146.667%;
 
+    @include abstracts.screen(md) {
+      font-size: 1.4rem;
+    }
+
     &-low {
       color: #9e9da8;
     }
   }
 
   &__icon {
-    margin-right: 20px;
+    margin: 0 20px 0 5pxs;
+
     height: 12px;
     width: 18px;
     border-bottom: 3px solid #67b044;
     border-left: 3px solid #67b044;
 
     rotate: -45deg;
+
+    @include abstracts.screen(md) {
+      margin-right: 10px;
+    }
   }
 
   &__detail {

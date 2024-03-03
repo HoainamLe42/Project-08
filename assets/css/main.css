@@ -3805,11 +3805,23 @@ html {
     font-size: 1.8rem;
   }
 }
+@media (max-width: 575.98px) {
+  .cart-info__heading {
+    font-size: 1.6rem;
+    font-weight: 600;
+  }
+}
 .cart-info__sub-heading {
   margin: 30px 0;
   font-size: 1.8rem;
   font-weight: 500;
   line-height: 144.444%;
+}
+@media (max-width: 767.98px) {
+  .cart-info__sub-heading {
+    font-size: 1.5rem;
+    margin: 20px 0;
+  }
 }
 .cart-info__list {
   margin-top: -30px;
@@ -3900,6 +3912,7 @@ html {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 30px;
 }
 .cart-info__edit-btn {
   display: flex;
@@ -3925,11 +3938,22 @@ html {
   display: flex;
   align-items: center;
   gap: 30px;
-  margin-bottom: 30px;
+  margin: 30px 0;
+}
+@media (max-width: 767.98px) {
+  .cart-info__form-row {
+    gap: 20px;
+    margin: 20px 0;
+  }
 }
 
 .cart-info + .cart-info {
   margin-top: 30px;
+}
+@media (max-width: 767.98px) {
+  .cart-info + .cart-info {
+    margin-top: 20px;
+  }
 }
 
 .cart-item {
@@ -4249,6 +4273,17 @@ html {
   border-radius: 20px;
   background: var(--payment-item-bg);
 }
+@media (max-width: 767.98px) {
+  .payment-item {
+    margin-top: 20px;
+    padding: 16px;
+  }
+}
+@media (max-width: 575.98px) {
+  .payment-item {
+    align-items: flex-start;
+  }
+}
 .payment-item--pointer {
   cursor: pointer;
 }
@@ -4256,6 +4291,13 @@ html {
   display: flex;
   align-items: center;
   flex: 1;
+  gap: 14px;
+}
+@media (max-width: 575.98px) {
+  .payment-item__content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 }
 .payment-item__info {
   flex: 1;
@@ -4265,22 +4307,37 @@ html {
   font-weight: 500;
   line-height: 144.444%;
 }
+@media (max-width: 767.98px) {
+  .payment-item__title {
+    font-size: 1.6rem;
+  }
+}
 .payment-item__desc {
   margin-top: 4px;
   font-size: 1.5rem;
   font-weight: 400;
   line-height: 146.667%;
 }
+@media (max-width: 767.98px) {
+  .payment-item__desc {
+    font-size: 1.4rem;
+  }
+}
 .payment-item__desc-low {
   color: #9e9da8;
 }
 .payment-item__icon {
-  margin-right: 20px;
+  margin: 0 20px 0 5pxs;
   height: 12px;
   width: 18px;
   border-bottom: 3px solid #67b044;
   border-left: 3px solid #67b044;
   rotate: -45deg;
+}
+@media (max-width: 767.98px) {
+  .payment-item__icon {
+    margin-right: 10px;
+  }
 }
 .payment-item__detail {
   padding: 20px;
