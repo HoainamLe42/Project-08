@@ -68,7 +68,7 @@
                 <div class="product-container">
                     <!-- Breadcrumbs -->
                     <ul class="breadcrumbs checkout-breadcrumbs">
-                        <li class="form__option">
+                        <li>
                             <a href="./" class="breadcrumbs__link"
                                 >Home
                                 <img
@@ -77,15 +77,15 @@
                                 />
                             </a>
                         </li>
-                        <li class="form__option">
-                            <a href="#!" class="breadcrumbs__link"
+                        <li>
+                            <a href="./checkout.html" class="breadcrumbs__link"
                                 >Checkout
                                 <img
                                     src="./assets/icons/breadcrumbs__icon.svg"
                                     alt=""
                             /></a>
                         </li>
-                        <li class="form__option">
+                        <li>
                             <a
                                 href="#!"
                                 class="breadcrumbs__link breadcrumbs__link-current"
@@ -149,11 +149,12 @@
                                                     class="address-card__choose"
                                                 >
                                                     <label
-                                                        class="address-card__checkbox"
+                                                        class="cart-info__checkbox"
                                                     >
                                                         <input
-                                                            type="checkbox"
-                                                            class="address-card__checkbox-input"
+                                                            type="radio"
+                                                            name="shipping-address"
+                                                            class="cart-info__checkbox-input"
                                                             checked
                                                     /></label>
                                                 </div>
@@ -209,11 +210,12 @@
                                                     class="address-card__choose"
                                                 >
                                                     <label
-                                                        class="address-card__checkbox"
+                                                        class="cart-info__checkbox"
                                                     >
                                                         <input
-                                                            type="checkbox"
-                                                            class="address-card__checkbox-input"
+                                                            type="radio"
+                                                            name="shipping-address"
+                                                            class="cart-info__checkbox-input"
                                                     /></label>
                                                 </div>
                                                 <div class="address-card__info">
@@ -648,7 +650,7 @@
                                     <span>$201.65</span>
                                 </div>
                                 <a
-                                    href="#!"
+                                    href="./payment.html"
                                     class="cart-info__next-btn btn btn--primary btn--rounded"
                                     >Continue to checkout</a
                                 >
@@ -692,13 +694,13 @@
                         class="modal__btn js-toggle btn btn--text btn--small"
                         toggle-target="#delete-confirm"
                     >
-                        Cancel
+                        No
                     </button>
                     <button
                         class="modal__btn js-toggle btn btn--primary btn--small btn-no-margin"
                         toggle-target="#delete-confirm"
                     >
-                        Confirm
+                        Yes
                     </button>
                 </div>
             </div>
@@ -711,7 +713,7 @@
         <!-- Modal : address new shipping address-->
         <div
             id="add-new-address"
-            class="modal show"
+            class="modal hide"
             style="--content-width: 650px"
         >
             <!-- <button class="modal__close">&times;</button> -->
@@ -817,6 +819,7 @@
                                         type="text"
                                         id="city"
                                         name="hidden"
+                                        readonly
                                         autocomplete="false"
                                         placeholder="City/District/Town"
                                         class="form__input js-toggle"
@@ -834,6 +837,11 @@
                                         id="city-dialog"
                                         class="form__select-dialog hide"
                                     >
+                                        <h2
+                                            class="form__dialog-heading d-none d-md-block"
+                                        >
+                                            City/District/Town
+                                        </h2>
                                         <button
                                             class="form__close-dialog d-none d-sm-block js-toggle"
                                             toggle-target="#city-dialog"
@@ -935,7 +943,7 @@
                             Cancel
                         </button>
                         <button
-                            class="modal__btn js-toggle btn btn--primary btn--small btn-no-margin form__submit-btn"
+                            class="modal__btn js-toggle btn btn--primary btn--small btn-no-margin"
                             toggle-target="#add-new-address"
                         >
                             Create

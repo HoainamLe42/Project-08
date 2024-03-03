@@ -33,6 +33,12 @@
     font-weight: 700;
     line-height: 141.667%;
 
+    &-lv2 {
+      font-size: 2.2rem;
+      font-weight: 500;
+      line-height: 145.455%;
+    }
+
     @include abstracts.screen(md) {
       font-size: 1.8rem;
     }
@@ -139,6 +145,42 @@
       font-size: 1.6rem;
       font-weight: 500;
       line-height: 150%;
+    }
+  }
+
+  &__top {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__edit {
+    &-btn {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+
+      font-size: 1.8rem;
+      font-weight: 400;
+      line-height: 144.444%;
+    }
+  }
+
+  &__checkbox {
+    &-input {
+      // Loại bỏ checkbox mặc định
+      appearance: none;
+      &::after {
+        content: url(../icons/checkbox-uncheck.svg);
+      }
+
+      &:not(:checked) {
+        filter: var(--icon-color);
+      }
+
+      &:checked::after {
+        content: url(../icons/checkbox-checked.svg);
+      }
     }
   }
 }
@@ -480,22 +522,86 @@
       line-height: 144.444%;
     }
   }
+}
+
+// Payment method
+.payment-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  margin-top: 30px;
+  padding: 20px;
+  border-radius: 20px;
+  background: #f6f6f6;
+
+  &--pointer {
+    cursor: pointer;
+  }
+
+  &__content {
+    display: flex;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
+  }
+
+  &__desc {
+    margin-top: 4px;
+    font-size: 1.5rem;
+    font-weight: 400;
+    line-height: 146.667%;
+
+    &-low {
+      color: #9e9da8;
+    }
+  }
+
+  &__icon {
+    margin-right: 20px;
+    height: 12px;
+    width: 18px;
+    border-bottom: 3px solid #67b044;
+    border-left: 3px solid #67b044;
+
+    rotate: -45deg;
+  }
+
+  &__detail {
+    padding: 20px;
+    margin-right: -20px;
+    color: rgba($color: #0071dc, $alpha: 0.7);
+
+    &:hover {
+      color: rgba($color: #0071dc, $alpha: 1);
+    }
+  }
+
+  &__thumb {
+    margin-right: 22px;
+    height: 45px;
+    width: 70px;
+    object-fit: cover;
+  }
 
   &__checkbox {
-    &-input {
-      // Loại bỏ checkbox mặc định
-      appearance: none;
-      &::after {
-        content: url(../icons/checkbox-uncheck.svg);
-      }
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    gap: 14px;
+  }
 
-      &:not(:checked) {
-        filter: var(--icon-color);
-      }
-
-      &:checked::after {
-        content: url(../icons/checkbox-checked.svg);
-      }
-    }
+  &__checkbox-input:checked + .payment-item__cost {
+    color: #9e9da8;
+  }
+  &__cost {
+    padding-top: 3px;
+    font-size: 1.8rem;
+    font-weight: 500;
+    line-height: 144.444%;
   }
 }
