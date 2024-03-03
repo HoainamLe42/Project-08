@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="">
+<html lang="en" class="dark">
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -133,13 +133,15 @@
                                 <!-- Payment item 1 -->
                                 <article class="payment-item">
                                     <div class="payment-item__content">
-                                        <h3 class="payment-item__title">
-                                            Imran Khan
-                                        </h3>
-                                        <p class="payment-item__desc">
-                                            Museum of Rajas, Sylhet Sadar,
-                                            Sylhet 3100.
-                                        </p>
+                                        <div class="payment-item__info">
+                                            <h3 class="payment-item__title">
+                                                Imran Khan
+                                            </h3>
+                                            <p class="payment-item__desc">
+                                                Museum of Rajas, Sylhet Sadar,
+                                                Sylhet 3100.
+                                            </p>
+                                        </div>
                                     </div>
                                     <div class="payment-item__icon"></div>
                                 </article>
@@ -147,12 +149,14 @@
                                 <!-- Payment item 2 -->
                                 <article class="payment-item">
                                     <div class="payment-item__content">
-                                        <h3 class="payment-item__title">
-                                            Items details
-                                        </h3>
-                                        <p class="payment-item__desc">
-                                            2 items
-                                        </p>
+                                        <div class="payment-item__info">
+                                            <h3 class="payment-item__title">
+                                                Items details
+                                            </h3>
+                                            <p class="payment-item__desc">
+                                                2 items
+                                            </p>
+                                        </div>
                                     </div>
                                     <a
                                         href="./shopping.html"
@@ -179,13 +183,13 @@
                                     <article
                                         class="payment-item payment-item--pointer"
                                     >
+                                        <img
+                                            src="./assets/img/payment/delivery-1.png"
+                                            alt=""
+                                            class="payment-item__thumb"
+                                        />
                                         <div class="payment-item__content">
-                                            <img
-                                                src="./assets/img/payment/delivery-1.png"
-                                                alt=""
-                                                class="payment-item__thumb"
-                                            />
-                                            <div>
+                                            <div class="payment-item__info">
                                                 <h3 class="payment-item__title">
                                                     Items details
                                                 </h3>
@@ -195,20 +199,20 @@
                                                     Delivery: 2-3 days work
                                                 </p>
                                             </div>
+                                            <div
+                                                class="cart-info__checkbox payment-item__checkbox"
+                                            >
+                                                <input
+                                                    type="radio"
+                                                    name="delivery-method"
+                                                    class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                    checked
+                                                />
+                                                <span class="payment-item__cost"
+                                                    >Free</span
+                                                >
+                                            </div>
                                         </div>
-                                        <label
-                                            class="cart-info__checkbox payment-item__checkbox"
-                                        >
-                                            <input
-                                                type="radio"
-                                                name="delivery-method"
-                                                class="cart-info__checkbox-input payment-item__checkbox-input"
-                                                checked
-                                            />
-                                            <span class="payment-item__cost"
-                                                >Free</span
-                                            ></label
-                                        >
                                     </article>
                                 </label>
 
@@ -217,13 +221,13 @@
                                     <article
                                         class="payment-item payment-item--pointer"
                                     >
+                                        <img
+                                            src="./assets/img/payment/delivery-2.png"
+                                            alt=""
+                                            class="payment-item__thumb"
+                                        />
                                         <div class="payment-item__content">
-                                            <img
-                                                src="./assets/img/payment/delivery-2.png"
-                                                alt=""
-                                                class="payment-item__thumb"
-                                            />
-                                            <div>
+                                            <div class="payment-item__info">
                                                 <h3 class="payment-item__title">
                                                     DHL Delivery
                                                 </h3>
@@ -233,20 +237,20 @@
                                                     Delivery: 2-3 days work
                                                 </p>
                                             </div>
-                                        </div>
-                                        <div
-                                            class="cart-info__checkbox payment-item__checkbox"
-                                        >
-                                            <input
-                                                type="radio"
-                                                name="delivery-method"
-                                                class="cart-info__checkbox-input payment-item__checkbox-input"
-                                                checked
-                                            />
-                                            <span
-                                                class="payment-item__cost payment-item__cost-low"
-                                                >$12.00</span
+                                            <div
+                                                class="cart-info__checkbox payment-item__checkbox"
                                             >
+                                                <input
+                                                    type="radio"
+                                                    name="delivery-method"
+                                                    class="cart-info__checkbox-input payment-item__checkbox-input"
+                                                    checked
+                                                />
+                                                <span
+                                                    class="payment-item__cost payment-item__cost-low"
+                                                    >$12.00</span
+                                                >
+                                            </div>
                                         </div>
                                     </article>
                                 </label>
@@ -255,43 +259,137 @@
 
                         <div class="col-4 col-xl-12">
                             <div class="cart-info">
-                                <div class="cart-info__row">
-                                    <span
-                                        >Subtotal
-                                        <span class="cart-info__sub-label"
-                                            >(items)</span
-                                        >
-                                    </span>
-                                    <span>3</span>
-                                </div>
-                                <div class="cart-info__row">
-                                    <span
-                                        >Price
-                                        <span class="cart-info__sub-label"
-                                            >(Total)</span
-                                        >
-                                    </span>
-                                    <span>$191.65</span>
-                                </div>
-                                <div class="cart-info__row">
-                                    <span>Shipping</span>
-                                    <span>$10.00</span>
-                                </div>
-
-                                <div
-                                    class="cart-info__separate cart-info__separate--right"
-                                ></div>
-                                <div class="cart-info__row">
-                                    <span>Estimated Total</span>
-                                    <span>$201.65</span>
-                                </div>
-                                <a
-                                    href="#!"
-                                    class="cart-info__next-btn btn btn--primary btn--rounded"
-                                    >Continue to checkout</a
+                                <h2
+                                    class="cart-info__heading cart-info__heading-lv2"
                                 >
-                            </div>
+                                    Payment Details
+                                </h2>
+                                <p class="payment-item__desc">
+                                    Complete your purchase item by providing
+                                    your payment details order.
+                                </p>
+                                <!-- Form payment -->
+                                <form class="form cart-info__form">
+                                    <div class="form__group">
+                                        <label
+                                            for=""
+                                            class="form__label form__label--small"
+                                            >Email Address</label
+                                        >
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name=""
+                                                placeholder="example@gmail.com"
+                                                class="form__input"
+                                                required
+                                            />
+                                        </div>
+                                        <p class="form__error">
+                                            Email chưa đúng định dạng
+                                        </p>
+                                    </div>
 
+                                    <div class="form__group">
+                                        <label
+                                            for=""
+                                            class="form__label form__label--small"
+                                            >Card Holder</label
+                                        >
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name=""
+                                                placeholder="example@gmail.com"
+                                                class="form__input"
+                                                required
+                                            />
+                                        </div>
+                                        <p class="form__error">
+                                            Email chưa đúng định dạng
+                                        </p>
+                                    </div>
+
+                                    <div class="form__group">
+                                        <label
+                                            for=""
+                                            class="form__label form__label--small"
+                                            >Card Details</label
+                                        >
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name=""
+                                                placeholder="example@gmail.com"
+                                                class="form__input"
+                                                required
+                                            />
+                                        </div>
+                                        <p class="form__error">
+                                            Email chưa đúng định dạng
+                                        </p>
+                                    </div>
+                                    <div
+                                        class="form__group cart-info__form-row"
+                                    >
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name=""
+                                                placeholder="MM/YY"
+                                                class="form__input"
+                                                required
+                                            />
+                                        </div>
+                                        <div class="form__text-input">
+                                            <input
+                                                type="email"
+                                                name=""
+                                                placeholder="CVC"
+                                                class="form__input"
+                                                required
+                                            />
+                                        </div>
+                                    </div>
+
+                                    <div class="cart-info__row">
+                                        <span
+                                            >Subtotal
+                                            <span class="cart-info__sub-label"
+                                                >(items)</span
+                                            >
+                                        </span>
+                                        <span>3</span>
+                                    </div>
+                                    <div class="cart-info__row">
+                                        <span
+                                            >Price
+                                            <span class="cart-info__sub-label"
+                                                >(Total)</span
+                                            >
+                                        </span>
+                                        <span>$191.65</span>
+                                    </div>
+                                    <div class="cart-info__row">
+                                        <span>Shipping</span>
+                                        <span>$10.00</span>
+                                    </div>
+
+                                    <div
+                                        class="cart-info__separate cart-info__separate--right"
+                                    ></div>
+                                    <div class="cart-info__row">
+                                        <span>Estimated Total</span>
+                                        <span>$201.65</span>
+                                    </div>
+                                    <a
+                                        href="#!"
+                                        class="cart-info__next-btn btn btn--primary btn--rounded"
+                                        >Pay $201.65</a
+                                    >
+                                </form>
+                            </div>
+                            <!-- Gift item -->
                             <div class="cart-info">
                                 <a href="#!">
                                     <article class="gift-item">

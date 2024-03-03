@@ -183,6 +183,13 @@
       }
     }
   }
+
+  &__form-row {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    margin-bottom: 30px;
+  }
 }
 
 .cart-info + .cart-info {
@@ -377,7 +384,6 @@
     font-size: 1.8rem;
     font-weight: 500;
     line-height: 144.444%;
-    color: var(--gift-item-color);
 
     @include abstracts.screen(md) {
       font-size: 1.6rem;
@@ -385,7 +391,6 @@
   }
 
   &__desc {
-    color: var(--gift-item-color);
     margin-top: 10px;
     font-size: 1.4rem;
     font-weight: 400;
@@ -528,12 +533,11 @@
 .payment-item {
   display: flex;
   align-items: center;
-  justify-content: space-between;
 
   margin-top: 30px;
   padding: 20px;
   border-radius: 20px;
-  background: #f6f6f6;
+  background: var(--payment-item-bg);
 
   &--pointer {
     cursor: pointer;
@@ -542,6 +546,11 @@
   &__content {
     display: flex;
     align-items: center;
+    flex: 1;
+  }
+
+  &__info {
+    flex: 1;
   }
 
   &__title {
