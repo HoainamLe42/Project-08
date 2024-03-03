@@ -1,0 +1,87 @@
+.payment-card {
+  position: relative;
+  height: 100%;
+  padding: 20px;
+  border-radius: 10px;
+  z-index: 0;
+  color: #fff;
+}
+.payment-card__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  pointer-events: none;
+  z-index: -1;
+}
+.payment-card__top {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.payment-card__type {
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 142.857%;
+}
+.payment-card__number {
+  margin-top: 37px;
+  font-size: 1.8rem;
+  font-weight: 500;
+  line-height: 144.444%;
+}
+.payment-card__bottom {
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.payment-card__label {
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 175%;
+}
+.payment-card__value {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 140%;
+}
+.payment-card__circle {
+  margin-left: auto;
+  --circle-width: 28px;
+  position: relative;
+  width: 42px;
+  height: var(--circle-width);
+}
+.payment-card__circle::after, .payment-card__circle::before {
+  content: "";
+  position: absolute;
+  top: 0px;
+  border-radius: 50%;
+  width: var(--circle-width);
+  height: var(--circle-width);
+}
+.payment-card__circle::after {
+  background: #f94545;
+  mix-blend-mode: hard-light;
+  z-index: 1;
+}
+.payment-card__circle::before {
+  right: 0;
+  background: #ffb700;
+}
+.payment-card__add-new {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  cursor: pointer;
+  border: 1px dashed #d2d1d6;
+}
+.payment-card__add {
+  font-size: 1.8rem;
+  font-weight: 500;
+  color: #ccc;
+}
+
+/*# sourceMappingURL=payment-card.css.map */
