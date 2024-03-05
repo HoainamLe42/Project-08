@@ -2634,6 +2634,11 @@ html {
     gap: 20px;
   }
 }
+@media (max-width: 575.98px) {
+  .form__row {
+    flex-direction: column-reverse;
+  }
+}
 .form__group {
   margin-top: 30px;
 }
@@ -4684,6 +4689,11 @@ html {
 .form-card__label {
   font-size: 1.8rem;
   margin-bottom: 20px;
+}
+@media (max-width: 575.98px) {
+  .form-card__label {
+    margin-bottom: 12px;
+  }
 }
 .form-card__bottom {
   display: flex;

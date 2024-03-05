@@ -1,7 +1,13 @@
+@use "../abstracts";
+
 .form-card {
   &__label {
     font-size: 1.8rem;
     margin-bottom: 20px;
+
+    @include abstracts.screen(sm) {
+      margin-bottom: 12px;
+    }
   }
 
   &__bottom {

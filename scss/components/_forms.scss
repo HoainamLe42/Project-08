@@ -19,6 +19,10 @@ $error-color: #ed4337;
     @include abstracts.screen(md) {
       gap: 20px;
     }
+
+    @include abstracts.screen(sm) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__group {
