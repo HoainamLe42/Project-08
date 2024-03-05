@@ -3974,6 +3974,12 @@ html {
     padding: 16px;
   }
 }
+.cart-info__back-arrow {
+  position: relative;
+  top: 3px;
+  width: 40px;
+  padding-right: 20px;
+}
 .cart-info__heading {
   font-size: 2.4rem;
   font-weight: 700;
@@ -4673,6 +4679,17 @@ html {
 }
 .profile__desc {
   margin-bottom: 16px;
+}
+
+.form-card__label {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+}
+.form-card__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 30px;
 }
 
 /*# sourceMappingURL=main.css.map */
