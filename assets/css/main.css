@@ -1817,6 +1817,12 @@ html {
   font-weight: 500;
   line-height: 146.67%;
 }
+.top-act__user {
+  position: relative;
+}
+.top-act__user:hover .act-dropdown {
+  visibility: visible;
+}
 .top-act__avatar {
   display: block;
   margin-left: 20px;
@@ -1829,6 +1835,13 @@ html {
   .top-act__avatar {
     margin-left: 0;
   }
+}
+.top-act__dropdown {
+  right: 0 !important;
+  width: min(300px, 100vw) !important;
+}
+.top-act__arrow-up {
+  right: 18px !important;
 }
 
 .nav-btn {
@@ -1959,6 +1972,41 @@ html {
   font-weight: 500;
   line-height: 146.667%;
   text-align: left;
+}
+
+.user-menu__top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+.user-menu__avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+.user-menu__name {
+  margin-bottom: 5px;
+  font-weight: 600;
+  font-size: 1.8rem;
+}
+.user-menu__list {
+  margin-top: 30px;
+}
+.user-menu__link {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 0;
+  font-weight: 500;
+}
+.user-menu__separate {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--separate-color);
+}
+.user-menu__icon {
+  width: 18px;
 }
 
 .logo {

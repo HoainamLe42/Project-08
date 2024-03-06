@@ -262,6 +262,14 @@
     @extend %flexItemsCenter;
   }
 
+  &__user {
+    position: relative;
+
+    &:hover .act-dropdown {
+      visibility: visible;
+    }
+  }
+
   &__avatar {
     display: block;
     margin-left: 20px;
@@ -273,6 +281,15 @@
     @include abstracts.screen(xl) {
       margin-left: 0;
     }
+  }
+
+  &__dropdown {
+    right: 0 !important;
+    width: min(300px, 100vw) !important;
+  }
+
+  &__arrow-up {
+    right: 18px !important;
   }
 }
 
@@ -429,5 +446,50 @@
     font-weight: 500;
     line-height: 146.667%;
     text-align: left;
+  }
+}
+
+// User menu
+
+.user-menu {
+  &__top {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+  }
+
+  &__avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  &__name {
+    margin-bottom: 5px;
+    font-weight: 600;
+    font-size: 1.8rem;
+  }
+
+  &__list {
+    margin-top: 30px;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 14px 0;
+    font-weight: 500;
+  }
+
+  &__separate {
+    margin-top: 10px;
+    padding-top: 10px;
+    border-top: 1px solid var(--separate-color);
+  }
+
+  &__icon {
+    width: 18px;
   }
 }
